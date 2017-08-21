@@ -14,7 +14,7 @@ export const Header = () => (
             个人中心
         </Link>
         {' · '}
-        <Link to='/list' activeClassName='route--active'>
+        <Link to='/list/list' activeClassName='route--active'>
             列表页
         </Link>
         {' · '}

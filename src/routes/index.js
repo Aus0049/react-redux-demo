@@ -2,6 +2,7 @@
 import CoreLayout from '../layouts/CoreLayout'
 import Home from './Home'
 import User from './User'
+import List from './List'
 import PageNotFound from './PageNotFound'
 import Redirect from './PageNotFound/redirect'
 
@@ -14,8 +15,9 @@ export const createRoutes = (store) => ({
     indexRoute: Home,
     childRoutes: [
         User(store),
-        PageNotFound(),
-        Redirect
+        List(store),
+        // PageNotFound(),
+        // Redirect
     ]
 });
 
