@@ -16,10 +16,7 @@ export const createRoutes = (store) => ({
   component: CoreLayout,
   indexRoute: Home,
   childRoutes: [
-    CounterRoute(store),
-    ZenRoute(store),
-    ElapseRoute(store),
-    RouteRoute(store),
+
     PageNotFound(),
     Redirect
   ]
