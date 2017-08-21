@@ -5,16 +5,16 @@ import './Header.scss'
 export const Header = () => (
     <div>
         <h1>React Redux Demo</h1>
-        <h2><a href='https://bodyno.com' target='_blank'>Aus</a></h2>
+        <h2><a href='https://github.com/Aus0049' target='_blank'>Aus</a></h2>
         <IndexLink to='/' activeClassName='route--active'>
             主页
         </IndexLink>
         {' · '}
-        <Link to='/counter' activeClassName='route--active'>
+        <Link to='/user' activeClassName='route--active'>
             个人中心
         </Link>
         {' · '}
-        <Link to='/counter' activeClassName='route--active'>
+        <Link to='/list' activeClassName='route--active'>
             列表页
         </Link>
         {' · '}
