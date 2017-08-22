@@ -14,7 +14,7 @@ function fetchList() {
         //     .catch(response => response.data)
 
         // 模拟接口
-        return new Promise(()=>{
+        return new Promise((resolve, reject)=>{
 
             const array = [
                 {id: 'a1', title: 'this is title', content: 'this is content'},
@@ -26,7 +26,7 @@ function fetchList() {
 
             dispatch(updateList(array));
 
-            return array;
+            resolve (array);
         });
     }
 }

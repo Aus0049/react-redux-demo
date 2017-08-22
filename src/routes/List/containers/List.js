@@ -13,7 +13,13 @@ class List extends React.Component {
         this.state = {};
     }
     componentDidMount () {
-        this.props.dispatch(actions.fetchList());
+        this.props.dispatch(actions.fetchList())
+            .then((result)=>{
+                // 在业务层里进行报错提示等业务操作
+                if(result){
+                    console.log('获取数据成功');
+                }
+            });
     }
     getListDOM () {
         const {list} = this.props.list;
