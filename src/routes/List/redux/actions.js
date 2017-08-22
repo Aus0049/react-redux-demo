@@ -60,7 +60,6 @@ const recoverDetail = (data) => ({
     payload: data
 });
 
-
 export default {
     fetchList,
     getDetailById,
