@@ -1,7 +1,7 @@
 /**
  * Created by Aus on 2017/8/21.
  */
-import * as actionType from './consts'
+import * as actionTypes from './actionTypes'
 
 function fetchList() {
     return (dispatch, getState) => {
@@ -46,17 +46,17 @@ function getDetailById(id) {
 }
 
 const initDetail = (data) => ({
-    type: actionType.LIST_DETAIL_INIT,
+    type: actionTypes.LIST_DETAIL_INIT,
     payload: data
 });
 
 const updateList = (data) => ({
-    type: actionType.LIST_LIST_UPDATE_LIST,
+    type: actionTypes.LIST_LIST_UPDATE_LIST,
     payload: data
 });
 
 const recoverDetail = (data) => ({
-    type: actionType.LIST_DETAIL_RECOVER,
+    type: actionTypes.LIST_DETAIL_RECOVER,
     payload: data
 });
 
