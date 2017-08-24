@@ -4,7 +4,7 @@
 import * as actionTypes from './actionTypes'
 
 function fetchList() {
-    return (dispatch, getState) => {
+    return (dispatch) => {
         // 这里使用axios发送请求
         // 此处可以通过getState()获取到整个store的数据
         // 发送请求前处理数据
@@ -14,7 +14,7 @@ function fetchList() {
         //     .catch(response => response.data)
 
         // 模拟接口
-        return new Promise((resolve, reject)=>{
+        return new Promise((resolve)=>{
 
             const array = [
                 {id: 'a1', title: 'this is title', content: 'this is content'},

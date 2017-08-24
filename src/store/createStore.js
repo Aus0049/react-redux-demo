@@ -15,7 +15,7 @@ export default (initialState = {}) => {
   // Store Enhancers
   // ======================================================
   const enhancers = []
-  if (__DEV__) {
+  if (window.__DEV__) {
     const devToolsExtension = window.devToolsExtension
     if (typeof devToolsExtension === 'function') {
       enhancers.push(devToolsExtension())

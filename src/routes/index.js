@@ -16,8 +16,8 @@ export const createRoutes = (store) => ({
     childRoutes: [
         User(store),
         List(store),
-        // PageNotFound(),
-        // Redirect
+        PageNotFound(),
+        Redirect
     ]
 });
 
