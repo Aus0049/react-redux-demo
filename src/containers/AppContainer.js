@@ -4,21 +4,22 @@ import { Provider } from 'react-redux'
 
 class AppContainer extends Component {
 
-  shouldComponentUpdate () {
-    return false
-  }
+    shouldComponentUpdate () {
+        return false
+    }
 
-  render () {
-    const { routes, store } = this.props
+    render () {
+        const { routes, store } = this.props
 
-    return (
-      <Provider store={store}>
-        <div style={{ height: '100%' }}>
-          <Router history={browserHistory} children={routes} />
-        </div>
-      </Provider>
-    )
-  }
+        return (
+          <Provider store={store}>
+            <div style={{ height: '100%' }}>
+                {/*eslint react/no-children-prop: "off"*/}
+              <Router history={browserHistory} children={routes} />
+            </div>
+          </Provider>
+        )
+    }
 }
 
 export default AppContainer

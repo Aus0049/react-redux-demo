@@ -3,17 +3,17 @@
  */
 import * as actionTypes from './actionTypes'
 
-const updateInfoUsername = (data) => ({
+const updateInfoUsername = data => ({
     type: actionTypes.USER_INFO_UPDATE_USERNAME,
-    payload: data
+    payload: data,
 });
 
-const updateInfoCustomData = (data) => ({
+const updateInfoCustomData = data => ({
     type: actionTypes.USER_INFO_UPDATE_CUSTOM_DATA,
-    payload: data
+    payload: data,
 });
 
 export default {
     updateInfoUsername,
-    updateInfoCustomData
+    updateInfoCustomData,
 };

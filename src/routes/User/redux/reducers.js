@@ -10,20 +10,22 @@ import * as actionTypes from './actionTypes'
 const infoState = {
     username: 'Aus',
     gender: 1,
-    address: 'Beijing China'
+    address: 'Beijing China',
 };
 
 // 个人信息页面的reducer
 export function infoReducer (state = infoState, action) {
-    switch (action.type){
-        case actionTypes.USER_INFO_UPDATE_USERNAME:
+    switch (action.type) {
+        case actionTypes.USER_INFO_UPDATE_USERNAME: {
             state.username = action.payload;
 
-            return {...state};
-        case actionTypes.USER_INFO_UPDATE_CUSTOM_DATA:
+            return { ...state };
+        }
+        case actionTypes.USER_INFO_UPDATE_CUSTOM_DATA: {
             state = Object.assign(state, action.payload);
 
-            return {...state};
+            return { ...state };
+        }
         default:
             return state;
     }

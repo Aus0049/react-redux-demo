@@ -2,8 +2,8 @@
  * Created by Aus on 2017/8/21.
  */
 import React from 'react'
-import {connect} from 'react-redux'
-import {bindActionCreators} from 'redux'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import actions from '../redux/actions'
 
 class Detail extends React.Component {
@@ -20,17 +20,19 @@ class Detail extends React.Component {
         this.props.dispatch(actions.recoverDetail());
     }
     render () {
-        const {title, content} = this.props.detail;
+        const { title, content } = this.props.detail;
 
-        return (<div>
-            <h1>{title}</h1>
-            <p>{content}</p>
-        </div>);
+        return (
+            <div>
+                <h1>{title}</h1>
+                <p>{content}</p>
+            </div>
+        );
     }
 }
 
-const mapStateToProps = (state) => ({
-    detail: state.detail
+const mapStateToProps = state => ({
+    detail: state.detail,
 });
 
-export default connect(mapStateToProps,dispatch=> {return { ...bindActionCreators(actions,dispatch), dispatch }})(Detail)
+export default connect(mapStateToProps, dispatch => ({ ...bindActionCreators(actions, dispatch), dispatch }))(Detail)

@@ -8,22 +8,20 @@ export const PLUS = 'PLUS'
 // ------------------------------------
 
 export function plus () {
-  return {
-    type: PLUS
-  }
+    return {
+        type: PLUS,
+    }
 }
 
 export const actions = {
-  plus
+    plus,
 }
 
 // ------------------------------------
 // Action Handlers
 // ------------------------------------
 const ACTION_HANDLERS = {
-  [PLUS]: (state) => {
-    return state + 1
-  }
+    [PLUS]: state => state + 1,
 }
 
 // ------------------------------------
@@ -31,7 +29,7 @@ const ACTION_HANDLERS = {
 // ------------------------------------
 const initialState = 0
 export default function elapseReducer (state = initialState, action) {
-  const handler = ACTION_HANDLERS[action.type]
+    const handler = ACTION_HANDLERS[action.type]
 
-  return handler ? handler(state, action) : state
+    return handler ? handler(state, action) : state
 }

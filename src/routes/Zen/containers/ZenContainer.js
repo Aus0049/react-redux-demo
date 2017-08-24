@@ -4,12 +4,12 @@ import { fetchZen, clearZen } from './../modules/zen'
 import Zen from '../components/Zen'
 
 const mapDispatchtoProps = {
-  fetchZen,
-  clearZen
+    fetchZen,
+    clearZen,
 }
 
-const mapStateToProps = (state) => ({
-  zen: state.zen
+const mapStateToProps = state => ({
+    zen: state.zen,
 })
 
 export default connect(mapStateToProps, mapDispatchtoProps)(Zen)

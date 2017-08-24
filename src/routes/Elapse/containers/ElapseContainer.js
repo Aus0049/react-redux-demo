@@ -4,11 +4,11 @@ import { plus } from './../modules/elapse'
 import Elapse from './../components/Elapse'
 
 const mapDispatchtoProps = {
-  plus
+    plus,
 }
 
-const mapStateToProps = (state) => ({
-  elapse: state.elapse
+const mapStateToProps = state => ({
+    elapse: state.elapse,
 })
 
 export default connect(mapStateToProps, mapDispatchtoProps)(Elapse)

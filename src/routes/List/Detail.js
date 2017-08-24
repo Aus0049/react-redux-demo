@@ -3,14 +3,14 @@
  */
 import { injectReducer } from '../../store/reducers'
 
-export default (store) => ({
+export default store => ({
     path: 'detail/:id',
-    getComponents(location, callback) {
-        require.ensure([], function (require) {
-            const {detailReducer} = require('./redux/index').default;
+    getComponents (location, callback) {
+        require.ensure([], (require) => {
+            const { detailReducer } = require('./redux/index')['default'];
             injectReducer(store, { key: 'detail', reducer: detailReducer });
 
-            callback(null, require('./containers/Detail').default)
+            callback(null, require('./containers/Detail')['default'])
         })
-    }
+    },
 })
