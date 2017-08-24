@@ -60,6 +60,11 @@ webpackConfig.plugins = [
   })
 ]
 
+// eslint
+webpackConfig.eslint = {
+    configFile: './.eslintrc'
+}
+
 if (__DEV__) {
   debug('Enable plugins for live development (HMR, NoErrors).')
   webpackConfig.plugins.push(
@@ -93,11 +98,17 @@ if (!__TEST__) {
 // ------------------------------------
 // Loaders
 // ------------------------------------
+// eslint
+webpackConfig.module.preLoaders = [{
+    test: /\.js$/,
+    loader: 'eslint-loader',
+    exclude: /node_modules/
+}]
 // JavaScript / JSON
 webpackConfig.module.loaders = [{
   test: /\.(js|jsx)$/,
   exclude: /node_modules/,
-  loader: 'babel',
+  loader: ['babel'],
   query: config.compiler_babel
 }, {
   test: /\.json$/,
