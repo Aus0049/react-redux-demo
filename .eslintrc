@@ -68,6 +68,7 @@
     "react/jsx-no-comment-textnodes": 2, // 检查jsx注释
     "react/jsx-no-duplicate-props": 2, // 检查属性名重名
     "react/jsx-no-target-blank": 2, // 检查jsx是否被引入和使用
+    "react/jsx-no-undef": 2, // 检查jsx引用规范
     "react/jsx-pascal-case": 2, // 检查jsx标签名规范
   },
 //  "rules": {
