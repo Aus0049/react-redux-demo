@@ -5,6 +5,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import actions from '../redux/actions'
+import '../style/index.scss'
 
 class Detail extends React.Component {
     constructor (props) {
