@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import actions from '../redux/actions'
 import '../style/index.scss'
+import '../style/detail.scss'
 
 class Detail extends React.Component {
     constructor (props) {

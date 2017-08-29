@@ -7,6 +7,7 @@ import { bindActionCreators } from 'redux'
 import actions from '../redux/actions'
 import { getListDOM } from '../util/'
 import '../style/index.scss'
+import '../style/list.scss'
 
 class List extends React.Component {
     constructor (props) {
