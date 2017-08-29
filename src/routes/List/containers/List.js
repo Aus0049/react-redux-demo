@@ -2,10 +2,10 @@
  * Created by Aus on 2017/8/21.
  */
 import React from 'react'
-import { Link } from 'react-router'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import actions from '../redux/actions'
+import { getListDOM } from '../util/'
 
 class List extends React.Component {
     constructor (props) {
@@ -21,21 +21,8 @@ class List extends React.Component {
                 }
             });
     }
-    getListDOM () {
-        const { list } = this.props.list;
-        const result = [];
-        list.map((item) => {
-            result.push(
-                <li key={item.id}>
-                    <Link to={`/list/detail/${item.id}`}>{item.title}</Link>
-                </li>
-            );
-        });
-
-        return result;
-    }
     render () {
-        const listDOM = this.getListDOM();
+        const listDOM = getListDOM(this.props.list);
 
         return (
             <div>
