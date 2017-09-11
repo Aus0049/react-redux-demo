@@ -11,6 +11,6 @@ export default store => ({
             injectReducer(store, { key: 'list', reducer: listReducer });
 
             callback(null, require('./containers/List')['default'])
-        })
+        }, 'list/list')
     },
 })

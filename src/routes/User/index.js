@@ -14,6 +14,6 @@ export default store => ({
             const Info = require('./containers/info')['default'];
 
             cb(null, Info);
-        })
+        }, 'user/user')
     },
 })

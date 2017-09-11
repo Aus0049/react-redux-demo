@@ -11,6 +11,6 @@ export default store => ({
             injectReducer(store, { key: 'detail', reducer: detailReducer });
 
             callback(null, require('./containers/Detail')['default'])
-        })
+        }, 'list/detail')
     },
 })

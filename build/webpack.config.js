@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const config = require('../config')
 const debug = require('debug')('app:webpack:config')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const paths = config.utils_paths
 const __DEV__ = config.globals.__DEV__
@@ -38,7 +39,7 @@ webpackConfig.entry = {
 // ------------------------------------
 webpackConfig.output = {
     filename: `[name].[${config.compiler_hash_type}].js`,
-    chunkFilename: '[chunkhash].js',
+    chunkFilename: '[name]_[chunkhash].js',
     path: paths.dist(),
     publicPath: config.compiler_public_path,
 }
@@ -74,6 +75,7 @@ if (__DEV__) {
 } else if (__PROD__) {
     debug('Enable plugins for production (OccurenceOrder, Dedupe & UglifyJS).')
     webpackConfig.plugins.push(
+    new BundleAnalyzerPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
