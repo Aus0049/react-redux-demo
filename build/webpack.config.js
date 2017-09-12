@@ -20,6 +20,14 @@ const webpackConfig = {
         root: paths.client(),
         extensions: ['', '.js', '.jsx', '.json'],
     },
+    externals: {
+        'react': 'React',
+        'react-dom': 'ReactDOM',
+        'react-router': 'ReactRouter',
+        'react-redux': 'ReactRedux',
+        'redux': 'Redux',
+        'history': 'History'
+    },
     module: {},
 }
 // ------------------------------------

@@ -46,10 +46,10 @@ const config = {
         colors : true,
     },
     compiler_vendors : [
-        'react',
-        'react-redux',
-        'react-router',
-        'redux',
+        // 'react',
+        // 'react-redux',
+        // 'react-router',
+        // 'redux',
     ],
 
   // ----------------------------------
